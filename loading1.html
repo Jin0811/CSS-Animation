@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right,#22c1c3, #fdbb2d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* border: 1px solid white; */
+        }
+        .container > p{
+            position: absolute;
+            bottom: 15px;
+            color: white;
+            font-size: 20px;
+            user-select: none;
+        }
+        .circle1{
+            width: 80px;
+            height: 80px;
+            border: 6px solid white;
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            z-index: 999;
+            animation-name: circleAnimation;
+            animation-duration: 2.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .circle2{
+            width: 80px;
+            height: 80px;
+            border: 6px solid white;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            position: absolute;
+            animation-name: circleAnimation;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes circleAnimation{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <p>Loading</p>
+    </div>
+</body>
+</html>
