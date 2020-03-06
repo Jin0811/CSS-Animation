@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("./images/bgc.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 500px;
+            height: 480px;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .container::before{
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 480px;
+            /* left: -20px;
+            top: -20px; */
+            filter: blur(20px);
+            z-index: -2;
+            background: url("./images/bgc.jpg") no-repeat center center fixed;
+        }
+        .layer{
+            position: absolute;
+            width: 500px;
+            height: 480px;
+            background-color: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #383838;
+            user-select: none;
+        }
+        .content > p:nth-child(1){
+            font-size: 18px;
+        }
+        .content > p:nth-child(2){
+            width: 100%;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        .content > p:nth-child(2) > span{
+            display: block;
+            text-align: center;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layer"></div>
+        <div class="content">
+            <p>我的一个道姑朋友</p>
+            <p>
+                <span>那年长街春意正浓</span>
+                <span>策马同游 烟雨如梦</span>
+                <span>檐下躲雨</span>
+                <span>望进一双深邃眼瞳</span>
+                <span>宛如华山夹着细雪的微风</span>
+                <span>雨丝微凉</span>
+                <span>风吹过暗香朦胧</span>
+                <span>一时心头悸动 似你温柔剑锋</span>
+                <span>过处翩若惊鸿</span>
+                <span>是否情字写来都空洞</span>
+                <span>一笔一画斟酌着奉送</span>
+                <span>甘愿卑微换个笑容</span>
+                <span>或沦为平庸</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
